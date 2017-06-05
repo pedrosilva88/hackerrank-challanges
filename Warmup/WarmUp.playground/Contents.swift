@@ -7,79 +7,82 @@ import Foundation
 // read array and map the elements to integer
 //let arr = readLine()!.components(separatedBy: " ").map{ Int($0)! }
 
-
-func challange1(a: Int, b: Int) {
-    print(a+b)
-}
-
-func challange2(arr: [Int]) {
+class warmUp {
     
-    var total = 0
-    for item in arr {
-        total += item
+    static func challange1(a: Int, b: Int) {
+        print(a+b)
     }
     
-    print(total)
-    
-}
-
-func challange3() {
-
-    let aliceArray = [5,6,7]
-    let bobArray = [3,6,10]
-    
-    var alicePoints = 0
-    var bobPoints = 0
-    
-    if aliceArray.count == bobArray.count {
+    static func challange2(arr: [Int]) {
         
-        let _ = (0..<aliceArray.count).map {
+        var total = 0
+        for item in arr {
+            total += item
+        }
+        
+        print(total)
+        
+    }
+    
+    static func challange3() {
+        
+        let aliceArray = [5,6,7]
+        let bobArray = [3,6,10]
+        
+        var alicePoints = 0
+        var bobPoints = 0
+        
+        if aliceArray.count == bobArray.count {
             
-            let aliceValue = aliceArray[$0]
-            let bobValue = bobArray[$0]
-            
-            if aliceValue > bobValue {
-                alicePoints += 1
-            } else if aliceValue < bobValue {
-                bobPoints += 1
+            let _ = (0..<aliceArray.count).map {
+                
+                let aliceValue = aliceArray[$0]
+                let bobValue = bobArray[$0]
+                
+                if aliceValue > bobValue {
+                    alicePoints += 1
+                } else if aliceValue < bobValue {
+                    bobPoints += 1
+                }
+                
             }
+            
+            print("\(alicePoints) \(bobPoints)")
             
         }
         
-        print("\(alicePoints) \(bobPoints)")
+    }
+    
+    static func challange4() {
+        
+        let numbersArray = [1000000001,1000000002,1000000003,1000000004,1000000005]
+        
+        var total = 0
+        numbersArray.map {
+            total += $0
+        }
+        
+        print(total)
         
     }
     
-}
-
-func challange4() {
-
-    let numbersArray = [1000000001,1000000002,1000000003,1000000004,1000000005]
-
-    var total = 0
-    numbersArray.map {
-        total += $0
-    }
-
-    print(total)
-
-}
-
-func challange5() {
-
-    let matrixN = 3
-    let matrix: [[Int]] = [[11,2,4],[4,5,6],[10,8,-12]]
-    
-    var leftDiagonal = 0
-    var rightDiagonal = 0
-    
-    for i in 0..<matrixN {
+    static func challange5() {
         
-        leftDiagonal += matrix[i][i]
-        rightDiagonal += matrix[i][matrixN-1-i]
+        let matrixN = 3
+        let matrix: [[Int]] = [[11,2,4],[4,5,6],[10,8,-12]]
+        
+        var leftDiagonal = 0
+        var rightDiagonal = 0
+        
+        for i in 0..<matrixN {
+            
+            leftDiagonal += matrix[i][i]
+            rightDiagonal += matrix[i][matrixN-1-i]
+            
+        }
+        
+        print(abs(leftDiagonal-rightDiagonal))
         
     }
     
-    print(abs(leftDiagonal-rightDiagonal))
-
 }
