@@ -7,6 +7,22 @@ import Foundation
 // read array and map the elements to integer
 //let arr = readLine()!.components(separatedBy: " ").map{ Int($0)! }
 
+
+func challange1(a: Int, b: Int) {
+    print(a+b)
+}
+
+func challange2(arr: [Int]) {
+    
+    var total = 0
+    for item in arr {
+        total += item
+    }
+    
+    print(total)
+    
+}
+
 func challange3() {
 
     let aliceArray = [5,6,7]
